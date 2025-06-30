@@ -1,4 +1,4 @@
-import { Widget } from '../types'
+import { Widget } from '@/types'
 import DataTable from './dataTable'
 import Image from './image'
 import Text from './Text'
