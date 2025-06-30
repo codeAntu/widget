@@ -1,0 +1,58 @@
+import { Widget } from './types'
+
+export const widgets: Widget[] = [
+  {
+    id: '1',
+    type: 'text-editor',
+    x: 0,
+    y: 0,
+    w: 4,
+    h: 3,
+    data: { value: 'Hello world' },
+  },
+  {
+    id: '2',
+    type: 'image-display',
+    x: 4,
+    y: 0,
+    w: 4,
+    h: 3,
+    data: { src: '' },
+  },
+  {
+    id: '3',
+    type: 'data-table',
+    x: 8,
+    y: 0,
+    w: 4,
+    h: 3,
+    data: { data: [] },
+  },
+  {
+    id: '4',
+    type: 'text-editor',
+    x: 0,
+    y: 3,
+    w: 4,
+    h: 3,
+    data: { value: 'Another text editor' },
+  },
+  {
+    id: '5',
+    type: 'image-display',
+    x: 4,
+    y: 3,
+    w: 4,
+    h: 3,
+    data: { src: '' },
+  },
+  {
+    id: '6',
+    type: 'data-table',
+    x: 8,
+    y: 3,
+    w: 4,
+    h: 3,
+    data: { data: [] },
+  },
+]

@@ -1,29 +1,31 @@
 import GridLayout from 'react-grid-layout'
+import { widgets } from './data'
+import renderWidget from './renderers/renderWidget'
+import { WidgetType } from './types'
 
 function App() {
-  const layout = [
-    { i: 'a', x: 0, y: 0, w: 1, h: 2, static: true },
-    { i: 'b', x: 1, y: 0, w: 3, h: 2, minW: 2, maxW: 4 },
-    { i: 'c', x: 4, y: 0, w: 1, h: 2 },
-  ]
+  const layout = widgets.map((w) => ({
+    i: w.id,
+    x: w.x,
+    y: w.y,
+    w: w.w,
+    h: w.h,
+  }))
 
   return (
-    <GridLayout className='layout' layout={layout} cols={12} rowHeight={30} width={1200}>
-      <div key='a' className='border' data-grid={{ x: 0, y: 0, w: 1, h: 2, static: true }}>
-        a
-      </div>
-
-      <div
-        className='text- border'
-        key='b'
-        data-grid={{ x: 1, y: 0, w: 3, h: 2, minW: 2, maxW: 4 }}
+    <div className='h-[100dvh] border'>
+      <GridLayout
+        className='layout w-full rounded-xl border'
+        layout={layout}
+        cols={12}
+        rowHeight={30}
+        width={1200}
       >
-        b
-      </div>
-      <div className='border' key='c' data-grid={{ x: 4, y: 0, w: 1, h: 2 }}>
-        c
-      </div>
-    </GridLayout>
+        {widgets.map((widget) => (
+          <div key={widget.id}>{renderWidget({ ...widget, type: widget.type as WidgetType })}</div>
+        ))}
+      </GridLayout>
+    </div>
   )
 }
 
