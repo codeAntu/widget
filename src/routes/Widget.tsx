@@ -63,6 +63,7 @@ const Widget = () => {
 
   return (
     <div className='h-[100dvh] border'>
+      {currentProject && <div className='mb-4 px-2 text-2xl font-bold'>{currentProject}</div>}
       <GridLayout
         className='layout w-full rounded-xl border'
         layout={layout}
