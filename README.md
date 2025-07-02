@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Widget Dashboard (Electron + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern Electron + React widget dashboard. It is **not complete** yet, but currently includes:
 
-Currently, two official plugins are available:
+- Multiple projects, each with its own customizable grid of widgets
+- Add text, image, and data table widgets 
+- Modern UI using shadcn/ui components
+- State persisted per project using zustand + localStorage
+- Project creation, selection, and navigation
+- Accessible popovers for adding widgets
+- Widget layout (move/resize) is persisted
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Not completed yet:**
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Widget deletion
+- Project deletion
+with custom width/height
+- Change the text in text widgets after creation
+- Change the image URL in image widgets after creation
+- Add data to tables in data table widgets
+- Further UI polish and customization
+- Additional widget types and advanced features
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+These features will be completed soon. Stay tuned for updates!

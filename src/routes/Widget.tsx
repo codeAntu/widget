@@ -21,7 +21,6 @@ const Widget = () => {
   const [height, setHeight] = useState(3)
   const [width, setWidth] = useState(4)
 
-  // Update handleSubmit to accept type
   const handleSubmit = (type: WidgetType) => {
     const newId = (widgets.length + 1).toString()
     let defaultData: any = {}
@@ -29,9 +28,8 @@ const Widget = () => {
     else if (type === 'image-display') defaultData = { src: inputValue }
     else if (type === 'data-table') defaultData = { data: [] }
 
-    // Validate width and height for edge cases and remove input arrows
-    const safeWidth = Math.max(1, Math.min(Number(width) || 1, 12)) // min 1, max 12, fallback 1
-    const safeHeight = Math.max(1, Math.min(Number(height) || 1, 12)) // min 1, max 12, fallback 1
+    const safeWidth = Math.max(1, Math.min(Number(width) || 1, 12)) 
+    const safeHeight = Math.max(1, Math.min(Number(height) || 1, 12)) 
     addWidget({
       id: newId,
       type,
@@ -83,9 +81,6 @@ const Widget = () => {
         rowHeight={30}
         width={1200}
         onLayoutChange={updateLayout}
-        onchange={() => {
-          console.log('Layout changed')
-        }}
       >
         {widgets.map((widget: any) => (
           <div key={widget.id}>{renderWidget({ ...widget, type: widget.type as WidgetType })}</div>
