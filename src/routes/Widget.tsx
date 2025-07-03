@@ -86,7 +86,7 @@ const Widget = () => {
           <div key={widget.id}>{renderWidget({ ...widget, type: widget.type as WidgetType })}</div>
         ))}
       </GridLayout>
-      <div className='absolute right-0 bottom-5 left-0 mx-auto flex w-fit rounded-lg border bg-white p-2 px-3 text-center font-semibold shadow-md'>
+      <div className='sticky right-0 bottom-5 left-0 mx-auto flex w-fit rounded-lg border bg-white p-2 px-3 text-center font-semibold shadow-md'>
         <Popover
           open={popoverOpen && selectedType === 'text-editor'}
           onOpenChange={(open) => {
